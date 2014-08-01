@@ -1,0 +1,3 @@
+.vagrant
+hiera/secrets.yaml
+*.pyc

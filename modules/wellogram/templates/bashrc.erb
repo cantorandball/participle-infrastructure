@@ -1,0 +1,3 @@
+export WELLOGRAM_PLATFORM_SECRET_KEY='<%= scope.function_hiera(['secret_key']) %>'
+export WELLOGRAM_PLATFORM_DB_PASSWORD='<%= scope.function_hiera(['db_password']) %>'
+export DJANGO_SETTINGS_MODULE=wellogram_platform.settings.staging
