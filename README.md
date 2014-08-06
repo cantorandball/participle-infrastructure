@@ -4,7 +4,7 @@
 
 | Name       | Host          |
 | ---------- | ------------- | 
-| vagrant    | [192.168.33.10](http://192.168.33.10) 
+| vagrant    | [192.168.33.10](https://192.168.33.10) 
 | staging    | [staging.wellogram.com](http://staging.wellogram.com)
 | live       | [wellogram.com](https://staging.wellogram.com)
 
@@ -15,13 +15,11 @@ Requirements:
   * [Vagrant](http://www.vagrantup.com/downloads.html).
   * [Puppet](http://puppetlabs.com/).
   * [Hiera](http://projects.puppetlabs.com/projects/hiera).
+  * [Hiera EYAML](https://github.com/TomPoulton/hiera-eyaml).
 
 ## Getting started
 
-Firstly, ensure you've created a `./hiera/secrets.yaml` file containing the Django secret key and database password as follows:
-
-    secret_key: <key>
-    db_password: <password>
+Firstly, ensure you've got a copy of the EYAML encryption keys in the `keys` folder. Contact [Ricardo Gladwell](mailto:ricardo@gladwell.me) if you don't have access to these.
 
 ## Test
 

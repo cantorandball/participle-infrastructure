@@ -49,6 +49,7 @@ def read_key_file(key_file):
 def bootstrap():
     if(env.site != 'vagrant'):
         install_puppet()
+        install_keys()
     provision()
     authorise()
 
@@ -62,7 +63,7 @@ def authorise():
 def install_puppet():
     run("apt-get update")
     run("apt-get -y install ruby-full build-essential")
-    run("sudo gem install puppet hiera --no-rdoc --no-ri", pty=True)
+    run("sudo gem install puppet hiera hiera-eyaml --no-rdoc --no-ri", pty=True)
 
 
 @task

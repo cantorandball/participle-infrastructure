@@ -62,15 +62,39 @@ package { 'nginx':
 }
 
 service { 'nginx':
-   ensure => running,
-   require => Package['nginx']
+  ensure => running,
+  require => Package['nginx']
+}
+
+file { "/etc/nginx/ssl/":
+  ensure => directory,
+  mode   => '0644',
+  require => Package['nginx']
+}
+
+file { "/etc/nginx/ssl/server.key":
+  content => hiera('ssl_private_key'),
+  mode   => '0600',
+  notify => Service['nginx'],
+  require => File['/etc/nginx/ssl']
+}
+
+file { "/etc/nginx/ssl/server.crt":
+  source => "puppet:///modules/nginx/ssl/$env/server.crt",
+  mode   => '0600',
+  notify => Service['nginx'],
+  require => File['/etc/nginx/ssl']
 }
 
 file { "/etc/nginx/sites-enabled/wellogram-platform.conf":
   source => 'puppet:///modules/nginx/wellogram-platform.conf',
   mode   => '0644',
   notify => Service['nginx'],
-  require => Package['nginx']
+  require => [
+        Package['nginx'],
+        File['/etc/nginx/ssl/server.key'],
+        File['/etc/nginx/ssl/server.crt']
+  ]
 }
 
 file { "/etc/nginx/sites-enabled/default":
