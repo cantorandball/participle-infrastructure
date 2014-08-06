@@ -14,9 +14,8 @@ Requirements:
 
   * [Python](https://www.python.org/) v2.7.
   * [Fabric](http://www.fabfile.org/).
+  * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
   * [Vagrant](http://www.vagrantup.com/downloads.html).
-  * [Puppet](http://puppetlabs.com/).
-  * [Hiera](http://projects.puppetlabs.com/projects/hiera).
   * [Hiera EYAML](https://github.com/TomPoulton/hiera-eyaml).
 
 ## Getting started
@@ -34,7 +33,7 @@ This should automatically download, run and bootstrap virtual images of a deploy
 
 ## Bootstrap
 
-First, run the following command to install Puppet and upload and deploy the manifest:
+When you first create a new environment you need run the following command to install Puppet, authorise your SSH key and upload and deploy the provisioning scripts:
 
     $ fab <name> <application> bootstrap
 
@@ -50,7 +49,7 @@ To deploy the code go the the [wellogram-platform-project](https://github.com/ca
 
     $ fab <name> deploy
 
-You should then be able to view the updated website at its host addresss.
+You should then be able to view the updated website at its host address.
 
 If the manifest changes you can update this by running:
 
