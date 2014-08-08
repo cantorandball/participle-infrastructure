@@ -80,5 +80,7 @@ def run_puppet():
 
     with cd("/tmp/puppet"):
         with prefix("export FACTER_env={}".format(env.platform)):
-            run("puppet apply --modulepath '/tmp/puppet/modules:/etc/puppet/modules' --hiera_config=/tmp/puppet/hiera.yaml --manifestdir /tmp/puppet/manifests --detailed-exitcodes /tmp/puppet/manifests/default.pp")
+            output = run("puppet apply --modulepath '/tmp/puppet/modules:/etc/puppet/modules' --hiera_config=/tmp/puppet/hiera.yaml --manifestdir /tmp/puppet/manifests --detailed-exitcodes /tmp/puppet/manifests/default.pp", warn_only=True)
+            if(output.return_code == 1):
+                raise SystemExit()
     
