@@ -1,5 +1,6 @@
 include upstart
 include apt
+include wellogram-firewall
 
 exec { "apt-update":
     command => "/usr/bin/apt-get update"
