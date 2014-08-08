@@ -87,7 +87,7 @@ file { "/etc/nginx/ssl/server.crt":
 }
 
 file { "/etc/nginx/sites-enabled/wellogram-platform.conf":
-  source => 'puppet:///modules/nginx/wellogram-platform.conf',
+  content => template('nginx/wellogram-platform.conf.erb'),
   mode   => '0644',
   notify => Service['nginx'],
   require => [

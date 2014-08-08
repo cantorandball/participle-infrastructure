@@ -24,6 +24,7 @@ def live():
     env.hosts = ['109.74.203.63']
     env.user =  'root'
     env.use_ssh_config = True
+    env.platform = 'live'
 
 
 @task
@@ -49,7 +50,6 @@ def read_key_file(key_file):
 def bootstrap():
     if(env.site != 'vagrant'):
         install_puppet()
-        install_keys()
     provision()
     authorise()
 
@@ -79,4 +79,6 @@ def run_puppet():
     put('./', '/tmp/puppet')
 
     with cd("/tmp/puppet"):
-        run("puppet apply --modulepath '/tmp/puppet/modules:/etc/puppet/modules' --hiera_config=/tmp/puppet/hiera.yaml --manifestdir /tmp/puppet/manifests --detailed-exitcodes /tmp/puppet/manifests/default.pp")
+        with prefix("export FACTER_env={}".format(env.platform)):
+            run("puppet apply --modulepath '/tmp/puppet/modules:/etc/puppet/modules' --hiera_config=/tmp/puppet/hiera.yaml --manifestdir /tmp/puppet/manifests --detailed-exitcodes /tmp/puppet/manifests/default.pp")
+    

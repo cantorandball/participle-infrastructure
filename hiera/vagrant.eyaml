@@ -1,24 +1,4 @@
-secret_key: >
-    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
-    DQYJKoZIhvcNAQEBBQAEggEAE++uNCIronrp7D1RFWab8Of6XQdKmph8bf7P
-    pnlgu/t+HFF827VMjzbgkfhwVg+y3dZaEG2tzebV0MNrah3JZkfv4zhygHD9
-    vlD0SvsqjDvDi+cXC58vmaQJO+LDzspjwbhTCkBxK8/j9EraGjxOgsyftYZg
-    cERs2XSCmeiQXhAONAgS0sCsbFfemQ3O67DChWmZyZsA2fTbjt1mQ7BZ7yyx
-    HXii8QmZPAXN9CI8tPE9+/jaxzkc/oMKsnVZZYMhWoOyK9idpAVOGAn+MKbb
-    ggO4zr5inzrS9rrsTfPaqkgFoIbgNS1qwlmg/FYRnoK7PAuwIuALKoobVl4x
-    jQ/tyzBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBB2TFu3yOhdarSuNGhx
-    dGPsgCBv7P7HTAw5qse3wCQOdvdK6hxZUJlF5D6dxcfXAlUFcg==]
-
-db_password: >
-    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
-    DQYJKoZIhvcNAQEBBQAEggEAukffM1NkXYAhaJldpaUg8r4pRCvpQTAw6/VQ
-    8dw8iYe0q4wtjwiwKBZL0ff+95ngVGQxSnkEn7TJ+hc8w+/l7Dt9jrK/wUuj
-    UMzmjinqgSPvFII8SkPrafTL0+p+unQkzFEJRtSuqe4cYtyA0K5hW0Q3072L
-    ifI/y6yCUiRj9Rj50uxI1lqC1h+y8YUDMStoWLbCw/QhF2alPsIHE3tihlu2
-    G7SD2yq7JOaxViAi7pPrRl5xD2bNxrnUeomIRerqWEhPIia09pRmXFKrlt3I
-    k10Lw6KSi9IFRs4MO3HYDDDx66NepqQm26DLrwgdqOzJiTcl3j1XW1obV3Ny
-    r/GbCDBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBaKivmUrM2V2z5jy2A
-    ZkzDgCCjiYhNvazOVWE64G15rflTSDJl4udEcUajhB3STa81fQ==]
+server_name: 192.168.33.10
 
 ssl_private_key: >
     ENC[PKCS7,MIIH/QYJKoZIhvcNAQcDoIIH7jCCB+oCAQAxggEhMIIBHQIBADAFMAACAQEw
