@@ -2,11 +2,13 @@
 
 [Puppet](http://puppetlabs.com/) scripts for building [Wellogram](http://wellogram.com) platform environments which are as follows:
 
-| Name       | Host          |
-| ---------- | ------------- | 
-| vagrant    | [192.168.33.10](https://192.168.33.10) 
-| staging    | [staging.wellogram.com](http://staging.wellogram.com)
-| live       | [wellogram.com](https://staging.wellogram.com)
+| Name       | Application | Host          |
+| ---------- | ----------- | ------------- | 
+| vagrant    | platform    | [192.168.33.10](https://192.168.33.10) 
+| vagrant    | measures    | [192.168.33.11](https://192.168.33.11) 
+| staging    | platform    | [staging.wellogram.com](http://staging.wellogram.com)
+| staging    | measures    | [178.79.149.144](http://178.79.149.144)
+| live       | platform    | [wellogram.com](https://staging.wellogram.com)
 
 Requirements:
 
@@ -25,17 +27,18 @@ Firstly, ensure you've got a copy of the EYAML encryption keys in the `keys` fol
 
 To test infrastructure run:
 
-    $ vagrant up
+    $ vagrant up platform
+    $ vagrant up measures
 
-This should automatically download, run and bootstrap a virtual image of a deployment environment.
+This should automatically download, run and bootstrap virtual images of a deployment environments.
 
 ## Bootstrap
 
 First, run the following command to install Puppet and upload and deploy the manifest:
 
-    $ fab <name> bootstrap
+    $ fab <name> <application> bootstrap
 
-Where `<name>` is the platform key as defined in the platform table above.
+Where `<name>` is the platform key and `<application>` is the app name, as defined in the platform table above.
 
 ## Deploy
 

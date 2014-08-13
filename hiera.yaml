@@ -8,6 +8,7 @@
   :pkcs7_public_key:  ./keys/public_key.pkcs7.pem
   :pkcs7_private_key:  ./keys/private_key.pkcs7.pem
 :hierarchy:
-   - common
+   - "%{::application}/%{::env}"
    - "%{::env}"
+   - common
 :logger: console
