@@ -8,7 +8,7 @@
 | vagrant    | measures    | [192.168.33.11](https://192.168.33.11) 
 | staging    | platform    | [staging.wellogram.com](http://staging.wellogram.com)
 | staging    | measures    | [178.79.149.144](http://178.79.149.144)
-| live       | platform    | [wellogram.com](https://staging.wellogram.com)
+| live       | platform    | [wellogram.com](https://wellogram.com)
 
 Requirements:
 
@@ -41,6 +41,10 @@ First, run the following command to install Puppet and upload and deploy the man
 Where `<name>` is the platform key and `<application>` is the app name, as defined in the platform table above.
 
 ## Deploy
+
+If you didn't bootstrap the environment you may need to add your SSH public key to the list for authorised deployment users:
+
+    $ fab <name> <application> authorise
 
 To deploy the code go the the [wellogram-platform-project](https://github.com/cantorandball/wellogram-platform-project) and run:
 

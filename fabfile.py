@@ -21,8 +21,6 @@ def staging():
 
 @task
 def live():
-    env.site = 'wellogram.com'
-    env.hosts = ['109.74.203.63']
     env.user =  'root'
     env.use_ssh_config = True
     env.platform = 'live'
@@ -40,7 +38,11 @@ def vagrant():
 
 @task
 def platform():
-    env.hosts = ['192.168.33.10']
+    if(env.platform is 'vagrant'):
+        env.hosts = ['192.168.33.10']
+    elif(env.platform is 'live'):
+        env.hosts = ['wellogram.com']
+
     env.deploy_user = 'wellogram-platform'
     env.application = 'platform'
 
