@@ -30,32 +30,36 @@ def live():
 def vagrant():
     env.platform = 'vagrant'
     env.user = 'vagrant'
- 
-    # use vagrant ssh key
-    result = local('vagrant ssh-config {} | grep IdentityFile'.format(env.application), capture=True)
-    env.key_filename = result.split()[1]
 
 
 @task
 def platform():
+    env.application = 'platform'
+
     if(env.platform is 'vagrant'):
         env.hosts = ['192.168.33.10']
+        # use vagrant ssh key
+        result = local('vagrant ssh-config {} | grep IdentityFile'.format(env.application), capture=True)
+        env.key_filename = result.split()[1]
     elif(env.platform is 'live'):
         env.hosts = ['wellogram.com']
 
     env.deploy_user = 'wellogram-platform'
-    env.application = 'platform'
 
 
 @task
 def measures():
+    env.application = 'measures'
+
     if(env.platform is 'vagrant'):
         env.hosts = ['192.168.33.11']
+        # use vagrant ssh key
+        result = local('vagrant ssh-config {} | grep IdentityFile'.format(env.application), capture=True)
+        env.key_filename = result.split()[1]
     elif(env.platform is 'staging'):
         env.hosts = ['178.79.149.144']
 
     env.deploy_user = 'measurements-api'
-    env.application = 'measures'
 
 
 def read_key_file(key_file):
