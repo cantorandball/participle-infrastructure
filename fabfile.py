@@ -43,6 +43,8 @@ def platform():
         env.key_filename = result.split()[1]
     elif(env.platform is 'live'):
         env.hosts = ['wellogram.com']
+    elif(env.platform is 'staging'):
+        env.hosts = ['staging.wellogram.com']
 
     env.deploy_user = 'wellogram-platform'
 
