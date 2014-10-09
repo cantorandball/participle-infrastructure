@@ -9,6 +9,7 @@
 | staging    | platform    | [staging.wellogram.com](http://staging.wellogram.com)
 | staging    | measures    | [178.79.149.144](http://178.79.149.144)
 | live       | platform    | [wellogram.com](https://wellogram.com)
+| live       | measures    | [api.wellkeyper.co.uk](https://api.wellkeyper.co.uk)
 
 Requirements:
 
