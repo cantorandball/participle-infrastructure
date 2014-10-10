@@ -64,6 +64,13 @@ def measures():
     env.deploy_user = 'measurements-api'
 
 
+@task
+def cmtadmin():
+    measures()
+
+    env.deploy_user = 'cmt-admin'
+
+
 def read_key_file(key_file):
     key_file = os.path.expanduser(key_file)
     if not key_file.endswith('pub'):

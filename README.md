@@ -6,10 +6,13 @@
 | ---------- | ----------- | ------------- | 
 | vagrant    | platform    | [192.168.33.10](https://192.168.33.10) 
 | vagrant    | measures    | [192.168.33.11](https://192.168.33.11) 
+| vagrant    | cmtadmin    | [192.168.33.11](https://192.168.33.11) 
 | staging    | platform    | [staging.wellogram.com](http://staging.wellogram.com)
 | staging    | measures    | [178.79.149.144](http://178.79.149.144)
+| staging    | cmtadmin    | [178.79.149.144](http://178.79.149.144)
 | live       | platform    | [wellogram.com](https://wellogram.com)
 | live       | measures    | [api.wellkeyper.co.uk](https://api.wellkeyper.co.uk)
+| live       | cmtadmin    | [wellkeyper.co.uk](https://wellkeyper.co.uk)
 
 Requirements:
 

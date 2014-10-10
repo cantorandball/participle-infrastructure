@@ -117,3 +117,59 @@ upstart::job { 'measurements-api':
                       Class['postgresql::server']
                     ]
 }
+
+sudo::conf { 'cmt-admin':
+  content  => "cmt-admin ALL = (root) NOPASSWD: /sbin/start cmt-admin, NOPASSWD: /sbin/stop cmt-admin, NOPASSWD: /sbin/restart cmt-admin, NOPASSWD: /sbin/status cmt-admin'",
+}
+
+group { "cmt-admin":
+}
+
+user { "cmt-admin":
+  ensure => present,
+  require => Group['cmt-admin'],
+  shell => '/bin/bash'
+}
+
+file { "/home/cmt-admin":
+  ensure => directory,
+  owner => 'cmt-admin',
+  group => 'cmt-admin',
+  require => User['cmt-admin']
+}
+
+file { "/home/cmt-admin/.ssh":
+  ensure => directory,
+  owner => 'cmt-admin',
+  group => 'cmt-admin',
+  mode => 0700,
+  require => User['cmt-admin']
+}
+
+file { "/home/cmt-admin/.ssh/authorized_keys":
+  ensure => present,
+  owner => 'cmt-admin',
+  group => 'cmt-admin',
+  mode => 0600,
+  require => User['cmt-admin']
+}
+
+$cmt_admin_api_key = hiera('cmt-admin-api-key')
+
+upstart::job { 'cmt-admin':
+  description    => "Capability Measurements Tool Admin",
+  user           => 'cmt-admin',
+  group          => 'cmt-admin',
+  chdir          => '/home/cmt-admin/cmt-admin',
+  environment    => {
+     'MEASUREMENTS_API_KEY' => "'${cmt_admin_api_key}'"
+  },
+  service_enable => false,
+  service_ensure => 'stopped',
+  exec           => '/home/cmt-admin/cmt-admin/bin/cmt-admin',
+  require        => [
+                      File['/home/cmt-admin'],
+                      File['/home/cmt-admin/.ssh/authorized_keys'],
+                      Package['nginx']
+                    ]
+}
