@@ -83,13 +83,28 @@ file { "/etc/participle/measurement-api/api-keys.properties":
   ]
 }
 
+$db_password = hiera('db_password')
+
+class { 'postgresql::server': }
+
+postgresql::server::role { 'measurements_api':
+  password_hash => postgresql_password('measurements_api', $db_password),
+}
+
+postgresql::server::db{ 'measurements_api':
+  user          => 'measurements_api',
+  password      => postgresql_password('measurements_api', $db_password),
+  grant         => 'all',
+}
+
 upstart::job { 'measurements-api':
   description    => "Capability Measurements API",
   user           => 'measurements-api',
   group          => 'measurements-api',
   chdir          => '/home/measurements-api/measurements-api',
   environment    => {
-     'MEASUREMENTS_API_KEYS_LOCATION' => '/etc/participle/measurement-api/api-keys.properties'
+     'MEASUREMENTS_API_KEYS_LOCATION' => '/etc/participle/measurement-api/api-keys.properties',
+     'MEASUREMENTS_API_DB_PASS' => "'${db_password}'"
   },
   service_enable => false,
   service_ensure => 'stopped',
@@ -98,6 +113,7 @@ upstart::job { 'measurements-api':
                       File['/home/measurements-api'],
                       File['/home/measurements-api/.ssh/authorized_keys'],
                       File['/etc/participle/measurement-api/api-keys.properties'],
-                      Package['nginx']
+                      Package['nginx'],
+                      Class['postgresql::server']
                     ]
 }
