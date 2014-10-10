@@ -43,7 +43,7 @@ file { "/home/measurements-api/.ssh/authorized_keys":
   require => User['measurements-api']
 }
 
-file { "/etc/nginx/sites-enabled/wellogram-platform.conf":
+file { "/etc/nginx/sites-enabled/measurements-api.conf":
   content => template('nginx/measurements-api.conf.erb'),
   mode   => '0644',
   notify => Service['nginx'],
@@ -114,7 +114,8 @@ upstart::job { 'measurements-api':
                       File['/home/measurements-api/.ssh/authorized_keys'],
                       File['/etc/participle/measurement-api/api-keys.properties'],
                       Package['nginx'],
-                      Class['postgresql::server']
+                      Class['postgresql::server'],
+                      File['/etc/nginx/sites-enabled/measurements-api.conf']
                     ]
 }
 
@@ -154,6 +155,17 @@ file { "/home/cmt-admin/.ssh/authorized_keys":
   require => User['cmt-admin']
 }
 
+file { "/etc/nginx/sites-enabled/cmt-admin.conf":
+  content => template('nginx/cmt-admin.conf.erb'),
+  mode   => '0644',
+  notify => Service['nginx'],
+  require => [
+        Package['nginx'],
+        File['/etc/nginx/ssl/server.key'],
+        File['/etc/nginx/ssl/server.crt']
+  ]
+}
+
 $cmt_admin_api_key = hiera('cmt-admin-api-key')
 
 upstart::job { 'cmt-admin':
@@ -170,6 +182,8 @@ upstart::job { 'cmt-admin':
   require        => [
                       File['/home/cmt-admin'],
                       File['/home/cmt-admin/.ssh/authorized_keys'],
-                      Package['nginx']
+                      File['/home/cmt-admin/.ssh/authorized_keys'],
+                      Package['nginx'],
+                      File['/etc/nginx/sites-enabled/cmt-admin.conf']
                     ]
 }

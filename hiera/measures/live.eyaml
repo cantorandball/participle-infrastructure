@@ -1,3 +1,6 @@
+server_name: wellkeyper.co.uk
+api_server_name: api.wellkeyper.co.uk
+
 cmt-admin-api-key: >
     ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
     DQYJKoZIhvcNAQEBBQAEggEABNv+3UHB/gCbmGEq/hQ/58hzMq5F3wD/Trkj
