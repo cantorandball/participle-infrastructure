@@ -33,7 +33,7 @@ class participle-base {
     }
 
     file { "/etc/nginx/ssl/server.crt":
-      source => "puppet:///modules/nginx/ssl/$env/server.crt",
+      content => hiera('ssl_certificate'),
       mode   => '0600',
       notify => Service['nginx'],
       require => File['/etc/nginx/ssl']
