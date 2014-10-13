@@ -60,6 +60,8 @@ def measures():
         env.key_filename = result.split()[1]
     elif(env.platform is 'staging'):
         env.hosts = ['178.79.149.144']
+    elif(env.platform is 'live'):
+        env.hosts = ['109.74.201.172']
 
     env.deploy_user = 'measurements-api'
 
