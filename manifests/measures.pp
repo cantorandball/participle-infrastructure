@@ -166,7 +166,7 @@ file { "/etc/nginx/sites-enabled/cmt-admin.conf":
   ]
 }
 
-$cmt_admin_api_key = hiera('cmt-admin-api-key')
+$cmt_admin_api_key_64 = hiera('cmt-admin-api-key-64')
 
 upstart::job { 'cmt-admin':
   description    => "Capability Measurements Tool Admin",
@@ -174,7 +174,7 @@ upstart::job { 'cmt-admin':
   group          => 'cmt-admin',
   chdir          => '/home/cmt-admin/cmt-admin',
   environment    => {
-     'MEASUREMENTS_API_KEY' => "'${cmt_admin_api_key}'"
+     'MEASUREMENTS_API_KEY_BASE64' => "'${cmt_admin_api_key_64}'"
   },
   service_enable => false,
   service_ensure => 'stopped',

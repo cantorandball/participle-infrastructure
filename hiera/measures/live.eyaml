@@ -2,6 +2,7 @@ server_name: wellkeyper.co.uk
 api_server_name: api.wellkeyper.co.uk
 
 cmt-admin-api-key: $2a$10$QxxSf2YWW4bqBFNdB7oEvuE0sx3b74RD9l9RwY8ywBIpWqn8BFHnS
+cmt-admin-api-key-64: SFVxIWg3YXZBJW1XcDdaNGshNGo=
 
 db_password: >
     ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
