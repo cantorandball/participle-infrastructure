@@ -19,6 +19,12 @@ class participle-base {
       require => Package['nginx']
     }
 
+    file { "/etc/nginx/nginx.conf":
+      source => "puppet:///modules/nginx/nginx.conf",
+      mode   => '0644',
+      require => Package['nginx']
+    }
+
     file { "/etc/nginx/ssl/":
       ensure => directory,
       mode   => '0644',
