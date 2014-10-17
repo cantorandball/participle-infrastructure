@@ -2,7 +2,17 @@ server_name: wellkeyper.co.uk
 api_server_name: api.wellkeyper.co.uk
 
 cmt-admin-api-key: $2a$10$QxxSf2YWW4bqBFNdB7oEvuE0sx3b74RD9l9RwY8ywBIpWqn8BFHnS
-cmt-admin-api-key-64: SFVxIWg3YXZBJW1XcDdaNGshNGo=
+cmt-admin-api-key-64: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAubPGeOWjGco0KO8RRwdG9LT7EUYF8C3XgHJ9
+    s7tc5m59M5OeQTLl3D7jdfOGl2uVUJxcoXPgRk9dfDwP1O2mNuPOuJwqjQ7N
+    zjT0plgEnPbsu5XaUyM5cwK6+dULudZfJ44sXXYhhl8EPeJsgyfRL0o2h/jJ
+    NxAPVL1Ju5puSpQk9AdilvXYPNTNSWS/YMYxJG9JG3qRHoGADfzKiEYrwsBx
+    yUYG8Sy23WxWWC8L2Vkreq7YO0LRBMADyG1v+fF/xQo2RnK+O1sFNeqJK/kY
+    8y0f7Haatx1PU7KalkoMtcHCJwHS7F734quAuV9mDjA5Fc/cF36d36+ypGNZ
+    MZdrJzBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAGTHqOK6CKgxFxufID
+    lxfWgCCYlS3omBx0FUrD1CkKQCgDFFTPn0XqlP3PgBpfmJ/35g==]
+
 wellogram-platform-api-key: $2a$10$qjpE9W3JC7BcaKoFVytmHO5BdPkgnM/WWHLmGhBsX5RTDW5D92g6q
 
 db_password: >
