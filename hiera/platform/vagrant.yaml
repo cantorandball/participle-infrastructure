@@ -1,1 +1,2 @@
 server_name: 192.168.33.10
+measurements-api-endpoint: api.vagrant.wellkeyper.co.uk

@@ -111,7 +111,9 @@ upstart::job { 'wellogram-platform':
   environment    => {
      'WELLOGRAM_PLATFORM_SECRET_KEY' => hiera('secret_key'),
      'WELLOGRAM_PLATFORM_DB_PASSWORD' => hiera('db_password'),
-     'DJANGO_SETTINGS_MODULE' => 'wellogram_platform.settings.staging'
+     'DJANGO_SETTINGS_MODULE' => 'wellogram_platform.settings.staging',
+     'MEASURES_API_KEY' => hiera('wellogram-platform-api-key-base64'),
+     'MEASURES_API_ENDPOINT' => hiera('measurements-api-endpoint')
   },
   exec           => '.virtualenvs/wellogram/bin/uwsgi --die-on-term --master --socket=127.0.0.1:8000 --module=wellogram_platform.wsgi:application --processes=3',
   require        => [

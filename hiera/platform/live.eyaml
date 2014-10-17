@@ -1,4 +1,5 @@
 server_name: wellogram.com
+measurements-api-endpoint: api.wellkeyper.co.uk
 
 ssl_private_key: >
     ENC[PKCS7,MIIH/QYJKoZIhvcNAQcDoIIH7jCCB+oCAQAxggEhMIIBHQIBADAFMAACAQEw
@@ -79,3 +80,14 @@ ssl_certificate: |
     ulVzhf2CxEZUUHePXrlsVki7hn4MVMPj35SVgx0yUpAwG4EUH5MegEizdjaZRnAW
     v4j4ZGA2qzxPVf7AAvXE7MJtk1ez413g19PV3mL179bAXnOY0hfK
     -----END CERTIFICATE-----
+
+wellogram-platform-api-key-base64: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAYZaaK3Ymp5nT2DrasKm2c1gjAURPE9H5SI0c
+    fjQlgeHtWdVcZ2DpZd/htW8v3hzPeMIv5urAAxbD8KaQJtBPSqa7+oYnO79u
+    481jiygv5f3rekkniPvZPVHgbCrRY+jFbXt/qeargk6riwKF/zLB8QYL1t1c
+    B5Ug+RPMKVps0AJ6EG0bug8b6DahTJcM2qYBBd/NpIzLRlN9dW0t43TAy7k3
+    ymNJM/94vGO9tUdyN4xVONGIKzrDWxtY51zXVjAJKytZP7LGUqltZhR4nBd3
+    R7J1RiOZ9Sl9JFEWiGiUw1kVRl223BjzlMEruDCH7J/vquzaRtefQwAABBDv
+    7/KdtjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBg4L1WIbBQIflN7wCY
+    9mc5gCBqrz1adIJ6x9Rbh5VYFz1FtcA5/Vx6soBmXr9Z3eXRQg==]
