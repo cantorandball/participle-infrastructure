@@ -3,6 +3,7 @@ api_server_name: api.wellkeyper.co.uk
 
 cmt-admin-api-key: $2a$10$QxxSf2YWW4bqBFNdB7oEvuE0sx3b74RD9l9RwY8ywBIpWqn8BFHnS
 cmt-admin-api-key-64: SFVxIWg3YXZBJW1XcDdaNGshNGo=
+wellogram-platform-api-key: $2a$10$qjpE9W3JC7BcaKoFVytmHO5BdPkgnM/WWHLmGhBsX5RTDW5D92g6q
 
 db_password: >
     ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw

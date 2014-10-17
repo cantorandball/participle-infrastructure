@@ -22,6 +22,7 @@ db_password: >
 
 cmt-admin-api-key: $2a$10$K/mIgvqy4hK5g6w2dyfHMuPtb4dyIlAaftn/9h43Tn3yL0AQjn0r2
 cmt-admin-api-key-64: ZFg3XmJaOCZSUFNtenZRR1liI3A=
+wellogram-platform-api-key: $2a$10$mEJw198XpX5rQevuwvU8HOkWNyH6Bq5pzqnAVSuE4a0KyQNvVnAMC
 
 ssl_certificate: |
     -----BEGIN CERTIFICATE-----
