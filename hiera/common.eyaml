@@ -50,3 +50,6 @@ ssl_certificate: |
     sXpoDqnR01gDeabNhyLRO7DjXhqAPh4eDGgInm6vQ2x2BddeVHAu5aRt4jlO1chB
     kamCTlWPeVW8TAuvXYLnFyN569qr7rCC3vyMrrw=
     -----END CERTIFICATE-----
+
+capabilty_measurements: |
+    []
