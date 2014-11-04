@@ -1,5 +1,5 @@
 server_name: wellogram.com
-measurements-api-endpoint: api.wellkeyper.co.uk
+measurements-api-endpoint: https://api.wellkeyper.co.uk
 
 ssl_private_key: >
     ENC[PKCS7,MIIH/QYJKoZIhvcNAQcDoIIH7jCCB+oCAQAxggEhMIIBHQIBADAFMAACAQEw
