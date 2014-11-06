@@ -109,6 +109,7 @@ def provision():
 
 def run_puppet():
     if(exists('/tmp/puppet') is not True):
+        run('rm -R /tmp/puppet')
         run('mkdir /tmp/puppet')
 
     put('./', '/tmp/puppet')
