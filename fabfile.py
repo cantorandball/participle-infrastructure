@@ -104,17 +104,15 @@ def install_puppet():
 @task
 def provision():
     if(env.platform != 'vagrant'):
-        run_puppet()
+        run_puppet('/tmp/puppet')
 
 
-def run_puppet():
-    if(exists('/tmp/puppet') is not True):
-        run('rm -R /tmp/puppet')
-        run('mkdir /tmp/puppet')
+def run_puppet(target):
+    run('rm -R {}'.format(target))
+    run('mkdir {}'.format(target))
+    put('./', target)
 
-    put('./', '/tmp/puppet')
-
-    with cd("/tmp/puppet"):
+    with cd(target):
         with prefix("export FACTER_env={}".format(env.platform)):
             with prefix("export FACTER_application={}".format(env.application)):
                 output = run("puppet apply --modulepath '/tmp/puppet/modules:/etc/puppet/modules' --hiera_config=/tmp/puppet/hiera.yaml --manifestdir /tmp/puppet/manifests --detailed-exitcodes /tmp/puppet/manifests/{}.pp".format(env.application), warn_only=True)
