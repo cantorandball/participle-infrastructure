@@ -8,7 +8,7 @@
 | vagrant    | measures    | [192.168.33.11](https://192.168.33.11) 
 | vagrant    | cmtadmin    | [192.168.33.11](https://192.168.33.11) 
 | staging    | platform    | [staging.wellogram.com](https://staging.wellogram.com)
-| staging    | measures    | [api.staging.wellkeyper.co.uk ](https://api.staging.wellkeyper.co.uk )
+| staging    | measures    | [api-staging.wellkeyper.co.uk](https://api-staging.wellkeyper.co.uk)
 | staging    | cmtadmin    | [staging.wellkeyper.co.uk ](https://staging.wellkeyper.co.uk )
 | live       | platform    | [wellogram.com](https://wellogram.com)
 | live       | measures    | [api.wellkeyper.co.uk](https://api.wellkeyper.co.uk)

@@ -1,5 +1,5 @@
 server_name: staging.wellkeyper.co.uk
-api_server_name: api.staging.wellkeyper.co.uk
+api_server_name: api-staging.wellkeyper.co.uk
 
 ssl_private_key: >
     ENC[PKCS7,MIIH/QYJKoZIhvcNAQcDoIIH7jCCB+oCAQAxggEhMIIBHQIBADAFMAACAQEw
