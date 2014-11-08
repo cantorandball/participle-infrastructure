@@ -38,7 +38,7 @@ class participle-base {
       require => File['/etc/nginx/ssl']
     }
 
-    file { "/etc/nginx/ssl/server.crt":
+    file { "/etc/nginx/ssl/server.pem":
       content => hiera('ssl_certificate'),
       mode   => '0600',
       notify => Service['nginx'],

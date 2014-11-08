@@ -8,7 +8,7 @@ server {
   listen 443 ssl;
   server_name <%= scope.function_hiera(['server_name']) %>;
 
-  ssl_certificate /etc/nginx/ssl/server.crt;
+  ssl_certificate /etc/nginx/ssl/server.pem;
   ssl_certificate_key /etc/nginx/ssl/server.key;
 
   location / {

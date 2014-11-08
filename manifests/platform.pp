@@ -59,7 +59,7 @@ file { "/etc/nginx/sites-enabled/wellogram-platform.conf":
   require => [
         Package['nginx'],
         File['/etc/nginx/ssl/server.key'],
-        File['/etc/nginx/ssl/server.crt']
+        File['/etc/nginx/ssl/server.pem']
   ]
 }
 
