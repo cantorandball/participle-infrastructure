@@ -111,7 +111,7 @@ upstart::job { 'wellogram-platform':
   environment    => {
      'WELLOGRAM_PLATFORM_SECRET_KEY' => hiera('secret_key'),
      'WELLOGRAM_PLATFORM_DB_PASSWORD' => hiera('db_password'),
-     'DJANGO_SETTINGS_MODULE' => 'wellogram_platform.settings.staging',
+     'DJANGO_SETTINGS_MODULE' => hiera('django-module'),
      'MEASURES_API_KEY' => hiera('wellogram-platform-api-key-base64'),
      'MEASURES_API_ENDPOINT' => hiera('measurements-api-endpoint')
   },

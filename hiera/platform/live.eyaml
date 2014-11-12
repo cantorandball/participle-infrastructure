@@ -1,5 +1,6 @@
 server_name: wellogram.com
 measurements-api-endpoint: https://api.wellkeyper.co.uk
+django-module: wellogram_platform.settings.live
 
 ssl_private_key: >
     ENC[PKCS7,MIIH/QYJKoZIhvcNAQcDoIIH7jCCB+oCAQAxggEhMIIBHQIBADAFMAACAQEw

@@ -53,3 +53,5 @@ ssl_certificate: |
 
 capabilty_measurements: |
     []
+
+django-module: wellogram_platform.settings.staging
