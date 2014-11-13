@@ -55,3 +55,10 @@ capabilty_measurements: |
     []
 
 django-module: wellogram_platform.settings.staging
+
+ssl_dhparam: |
+    -----BEGIN DH PARAMETERS-----
+    MIGHAoGBAOq+rMh/uHGjKXDu3jUyhvYwtqw6WrZ+qXCW6/qAy30Bj3VzQGidSadu
+    uxYu5Oz6G7vt4f/hmbJ7xRVu+2tgaw0zBUy3+F1lCZvjOrdFAncaMgGMYrtYHkbB
+    fTNSp87rDVwOyUYtdOO1ZxZfuJqqs4ngl2iyS0S+WIseUARf6WLLAgEC
+    -----END DH PARAMETERS-----

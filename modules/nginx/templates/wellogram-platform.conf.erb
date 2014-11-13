@@ -12,6 +12,8 @@ server {
   ssl_session_timeout 5m;
   ssl_session_cache shared:SSL:50m;
 
+  ssl_dhparam /etc/nginx/ssl/dhparam.pem;
+
   location / {
     uwsgi_pass 127.0.0.1:8000;
     include uwsgi_params;

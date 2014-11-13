@@ -45,6 +45,13 @@ class participle-base {
       require => File['/etc/nginx/ssl']
     }
 
+    file { "/etc/nginx/ssl/dhparam.pem":
+      content => hiera('ssl_dhparam'),
+      mode   => '0600',
+      notify => Service['nginx'],
+      require => File['/etc/nginx/ssl']
+    }
+
     file { "/etc/nginx/sites-enabled/default":
        require => Package["nginx"],
        ensure  => absent,
