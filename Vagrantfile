@@ -4,7 +4,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box"
+  config.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
 
   config.vm.synced_folder "hiera/", "/tmp/vagrant-puppet-1/hiera"
   config.vm.synced_folder "keys/", "/tmp/vagrant-puppet-1/keys"
