@@ -52,6 +52,13 @@ class participle-base {
       require => File['/etc/nginx/ssl']
     }
 
+    file { "/etc/nginx/ssl/trusted_certificate.pem":
+      content => hiera('ssl_trusted_certificate'),
+      mode   => '0600',
+      notify => Service['nginx'],
+      require => File['/etc/nginx/ssl']
+    }
+
     file { "/etc/nginx/sites-enabled/default":
        require => Package["nginx"],
        ensure  => absent,

@@ -60,7 +60,8 @@ file { "/etc/nginx/sites-enabled/wellogram-platform.conf":
         Package['nginx'],
         File['/etc/nginx/ssl/server.key'],
         File['/etc/nginx/ssl/server.pem'],
-        File['/etc/nginx/ssl/dhparam.pem']
+        File['/etc/nginx/ssl/dhparam.pem'],
+        File['/etc/nginx/ssl/trusted_certificate.pem']
   ]
 }
 

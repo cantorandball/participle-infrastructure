@@ -20,6 +20,13 @@ server {
 
   add_header Strict-Transport-Security max-age=15768000;
 
+  ssl_stapling on;
+  ssl_stapling_verify on;
+
+  ssl_trusted_certificate /etc/nginx/ssl/trusted_certificate.pem;
+
+  resolver 74.207.241.5;
+
   location / {
     proxy_pass http://127.0.0.1:8080;
     proxy_set_header Host $http_host;
