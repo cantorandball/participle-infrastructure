@@ -118,7 +118,6 @@ upstart::job { 'measurements-api':
      'MEASUREMENTS_REF_DATA_LOCATION' => '/etc/participle/measurement-api/capabilty-measurements.json'
   },
   service_enable => false,
-  service_ensure => 'stopped',
   exec           => 'sh /home/measurements-api/measurements-api/bin/measurements-api',
   require        => [
                       File['/home/measurements-api'],
@@ -189,7 +188,6 @@ upstart::job { 'cmt-admin':
      'MEASUREMENTS_API_KEY_BASE64' => "'${cmt_admin_api_key_64}'"
   },
   service_enable => false,
-  service_ensure => 'stopped',
   exec           => '/home/cmt-admin/cmt-admin/bin/cmt-admin',
   require        => [
                       File['/home/cmt-admin'],
