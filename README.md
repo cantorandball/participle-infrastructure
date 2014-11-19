@@ -1,6 +1,6 @@
-#Wellogram Infrastructure
+#Participle Infrastructure
 
-[Puppet](http://puppetlabs.com/) scripts for building [Wellogram](http://wellogram.com) platform environments which are as follows:
+[Puppet](http://puppetlabs.com/) scripts for building [Participle](http://participle.net) platform environments which are as follows:
 
 | Name       | Application | Host          |
 | ---------- | ----------- | ------------- | 
