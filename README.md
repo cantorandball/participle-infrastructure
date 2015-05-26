@@ -57,7 +57,7 @@ You should then be able to view the updated website at its host address.
 
 If the manifest changes you can update this by running:
 
-    $ fab <name> provision
+    $ fab <name> <application> provision
 
 Or just run:
 
