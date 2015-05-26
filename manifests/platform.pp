@@ -106,16 +106,17 @@ file { "/home/wellogram-platform/.ssh/authorized_keys":
 }
 
 upstart::job { 'wellogram-platform':
-  description    => "Wellogram Platform",
-  user           => 'wellogram-platform',
-  group          => 'wellogram-platform',
-  chdir          => '/home/wellogram-platform',
-  environment    => {
-     'WELLOGRAM_PLATFORM_SECRET_KEY' => hiera('secret_key'),
+  description => "Wellogram Platform",
+  user        => 'wellogram-platform',
+  group       => 'wellogram-platform',
+  chdir       => '/home/wellogram-platform',
+  environment => {
+     'WELLOGRAM_PLATFORM_SECRET_KEY'  => hiera('secret_key'),
      'WELLOGRAM_PLATFORM_DB_PASSWORD' => hiera('db_password'),
-     'DJANGO_SETTINGS_MODULE' => hiera('django-module'),
-     'MEASURES_API_KEY' => hiera('wellogram-platform-api-key-base64'),
-     'MEASURES_API_ENDPOINT' => hiera('measurements-api-endpoint')
+     'DJANGO_SETTINGS_MODULE'         => hiera('django-module'),
+     'MEASURES_API_KEY'               => hiera('wellogram-platform-api-key-base64'),
+     'MEASURES_API_ENDPOINT'          => hiera('measurements-api-endpoint'),
+     'MANDRILL_API_KEY'               => hiera('mandrill_api_key')
   },
   exec           => '.virtualenvs/wellogram/bin/uwsgi --die-on-term --master --socket=127.0.0.1:8000 --module=wellogram_platform.wsgi:application --processes=3',
   require        => [

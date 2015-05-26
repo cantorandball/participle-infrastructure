@@ -20,6 +20,17 @@ db_password: >
     r/GbCDBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBaKivmUrM2V2z5jy2A
     ZkzDgCCjiYhNvazOVWE64G15rflTSDJl4udEcUajhB3STa81fQ==]
 
+mandrill_api_key: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEABMm6JJrgRhEPUn3O+up6yroxunsP3973Y/I4
+    ioT+0anr33vlSoclKub0eXKHj7k47DWFqkcLWSemoARYvjdnp+BMCf40zdOt
+    zJeriqP5DZMki0QR6g5VXrDAmpSggnhCYIGqQDvTnxZRWhWEEnZOPAmkkVLV
+    25pavF+6O0RkXLgKtL0U0wnBKLsjBirahB7PQDCXzM3KoEncWKUnk8NTIfzW
+    10OGzRe7gGakfnJ9amP8PkmqjJRqBD3HkA/LRhvRgTTx8Yd1A6LkWR9E1nhZ
+    b+idO7ryD/NzmrwEwGN9I53IucaYn7qbxqkuu6goHZtzWf+crLwHPpdDdcIQ
+    /V7OnjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBABl2r00vu3J/vE/MfV
+    6ObTgCDbcmlr0T6hfhedukXrE9SIMAo7jZUouZirjPiYzGtomg==]
+
 cmt-admin-api-key: $2a$10$K/mIgvqy4hK5g6w2dyfHMuPtb4dyIlAaftn/9h43Tn3yL0AQjn0r2
 cmt-admin-api-key-64: ZFg3XmJaOCZSUFNtenZRR1liI3A=
 wellogram-platform-api-key: $2a$10$mEJw198XpX5rQevuwvU8HOkWNyH6Bq5pzqnAVSuE4a0KyQNvVnAMC

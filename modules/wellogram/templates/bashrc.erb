@@ -3,3 +3,4 @@ export WELLOGRAM_PLATFORM_DB_PASSWORD='<%= scope.function_hiera(['db_password'])
 export DJANGO_SETTINGS_MODULE=<%= scope.function_hiera(['django-module']) %>
 export MEASURES_API_KEY='<%= scope.function_hiera(['wellogram-platform-api-key-base64']) %>'
 export MEASURES_API_ENDPOINT='<%= scope.function_hiera(['measurements-api-endpoint']) %>'
+export MANDRILL_API_KEY='<%= scope.function_hiera(['mandrill_api_key']) %>'
